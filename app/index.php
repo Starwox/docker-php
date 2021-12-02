@@ -1,10 +1,11 @@
-<?php ?>
+<?php
+?>
 
 <html>
 <head>
 
 </head>
 <body>
-<h1>Hello World</h1>
+<h1>HELLO WORLD</h1>
 </body>
 </html>
