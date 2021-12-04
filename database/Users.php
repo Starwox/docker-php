@@ -6,6 +6,7 @@
  * Time: 15:30
  */
 
+
 class Users {
     protected $db;
 
@@ -26,5 +27,18 @@ class Users {
             echo false;
         }
         $this->db->close();
+    }
+
+    function addUser($username, $password) {
+        $sql = 'INSERT INTO users(username, password) VALUES (:username, :password)';
+
+        $insertRecipe = $this->db->prepare($sql);
+
+        $encoded = password_hash( $password, PASSWORD_DEFAULT);
+
+        $insertRecipe->execute([
+            'username' => $username,
+            'password' => $encoded,
+        ]);
     }
 }
