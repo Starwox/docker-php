@@ -3,20 +3,14 @@ $request = $_SERVER['REQUEST_URI'];
 
 switch ($request) {
     case '/' :
-        require __DIR__ . '/views/index.php';
+        require __DIR__ . '/Views/home.php';
         break;
     case '' :
-        require __DIR__ . '/views/index.php';
+        require __DIR__ . '/Views/home.php';
+        break;
+    case '/register' :
+        require __DIR__ . '/Views/Form/register.php';
         break;
 }
 
 ?>
-
-<html>
-<head>
-
-</head>
-<body>
-<h1>HELLO WORLD</h1>
-</body>
-</html>

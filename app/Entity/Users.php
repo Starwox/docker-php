@@ -8,6 +8,32 @@
 
 
 class Users {
+
+
+
+    // Properties
+
+    /**
+     * @var int The article ID from the database
+     */
+    public $id;
+
+    /**
+     * @var int The article ID from the database
+     */
+    public $username;
+
+    /**
+     * @var int The article ID from the database
+     */
+    public $password;
+
+    /**
+     * @var int The article ID from the database
+     */
+    public $admin = false;
+
+
     protected $db;
 
     public function __construct()
