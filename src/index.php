@@ -8,9 +8,10 @@ switch ($request) {
     case '' :
         require __DIR__ . '/Views/home.php';
         break;
-    case 'register' :
+    case '/register' :
         require __DIR__ . '/Views/Form/register.php';
         break;
 }
+
 
 ?>

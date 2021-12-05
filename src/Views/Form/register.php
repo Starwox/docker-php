@@ -5,7 +5,7 @@
  * Date: 04/12/2021
  * Time: 20:14
  */
-require('../../Entity/Users.php');
+//require('../../Entity/Users.php');
 
 if(isset($_POST['register'])) {
     echo "This is Button1 that is selected";
