@@ -8,14 +8,13 @@ services:
         - 5555:80
     volumes:
         - ./src:/var/www/html
+    networks:
+     - my-net
   mysql:
-    image: mysql:5.7
+    image: mariadb
     restart: always
     environment:
-        MYSQL_ROOT_PASSWORD: password
-        MYSQL_DATABASE: cms
-    ports:
-      - 3306:3306
+        MYSQL_ROOT_PASSWORD: passwords
     command: --init-file /data/application/init.sql
     volumes:
         - ./database/sql/createTable.sql:/data/application/init.sql
@@ -29,3 +28,8 @@ services:
     environment:
       PMA_HOST: mysql
       MYSQL_ROOT_PASSWORD: 'password'
+
+networks :
+  my-net:
+    name: my-net
+    external: true

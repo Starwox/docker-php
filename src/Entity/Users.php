@@ -6,10 +6,8 @@
  * Time: 15:30
  */
 
-
+require("connect.php");
 class Users {
-
-
 
     // Properties
 
