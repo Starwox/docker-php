@@ -10,5 +10,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL auto_increment,
   `username` varchar(250)  NOT NULL,
   `password`  varchar(250) NOT NULL,
+  `admin`  boolean NOT NULL default false,
    PRIMARY KEY  (`id`)
 );
